@@ -1,0 +1,11 @@
+body {
+
+    padding: 10px;
+}
+
+.box{
+    a{
+        display: block;
+        padding: 10px; 
+    }
+}
