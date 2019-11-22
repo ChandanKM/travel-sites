@@ -1,11 +1,12 @@
-body {
+@import 'normalize.css';
+@import 'base/_global';
+@import 'modules/_variables';
+@import 'modules/_mixins.css';
+@import 'modules/_large-hero';
+@import 'modules/_btn.css';
+@import 'modules/_wrapper.css';
+@import 'modules/_page-section.css';
+@import 'modules/_hedline.css';
+@import 'modules/_row.css';
 
-    padding: 10px;
-}
 
-.box{
-    a{
-        display: block;
-        padding: 10px; 
-    }
-}
