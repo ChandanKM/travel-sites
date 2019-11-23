@@ -1,12 +1,15 @@
 .headline{
     font-weight: 300;
-    font-size: 1.9rem;
+    font-size: 1.9rem; 
     color: $mainblue;
 
+   
     @mixin atSmall{
         font-size: 2.875rem;
     }
-
+    &--no-t-margin{
+        margin-top: 0;
+    }
     &--centered{
         text-align: center;
     }

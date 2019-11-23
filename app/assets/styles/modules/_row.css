@@ -2,8 +2,13 @@
     
     @mixin clearfix;
 
-
+    
     @mixin atMedium{
+
+        &__b-margin-until-medium{
+        margin-bottom:0;   
+        }
+
         &__medium-4{
             float: left;
             width:33.33%;
@@ -14,13 +19,18 @@
         }
 
         &__medium-4--larger{
-            width:37%;
+            width:37%; 
         }
         &__medium-8--smaller{
             width:63%;
 
         }
+        
     }
+    &__b-margin-until-medium{
+        margin-bottom:1rem;   
+        }
+
 
     /* added the negetive value here to avoid the extra pixel 
     overflow outside to avoid this we use 'overflow:hidden' 
