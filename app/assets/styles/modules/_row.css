@@ -25,6 +25,10 @@
             width:63%;
 
         }
+        &__medium-6{
+            float: left;
+            width:50%; 
+        }
         
     }
     &__b-margin-until-medium{
@@ -40,8 +44,16 @@
         margin-right:-65px;
     }
 
+    &--gutter-large{
+        margin-right:-100px;
+    }
+
     &--gutter > div{
         padding-right: 65px;
         
     }
+    &--gutter-large > div{
+        padding-right:100px;
+    }
+
 }
