@@ -483,6 +483,36 @@ a{
     }
     }
 
+.wrapper--no-padding-until-medium
+    {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+@media(min-width : 800px){
+
+.wrapper--no-padding-until-medium
+    {
+            padding-left: 18px;
+            padding-right: 18px
+    }
+    }
+
+.wrapper--no-padding-until-large
+    {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+@media(min-width : 1010px){
+
+.wrapper--no-padding-until-large
+    {
+            padding-left: 18px;
+            padding-right: 18px
+    }
+    }
+
 .wrapper{
     padding-left: 0;
     padding-right: 0;
@@ -502,6 +532,41 @@ a{
 .page-section--blue{
 background-color: #2f5572;
 color:#FFF;
+    }
+
+.page-section--no-b-padding-until-medium
+    {
+        padding-bottom: 0;
+    }
+
+@media(min-width : 800px){
+
+.page-section--no-b-padding-until-medium
+    {
+            padding-bottom:4.5rem
+    }
+    }
+
+.page-section--no-b-padding-until-large
+    {
+        padding-bottom: 0;
+    }
+
+@media(min-width : 1010px){
+
+.page-section--no-b-padding-until-large
+    {
+            padding-bottom:4.5rem
+    }
+    }
+
+@media(min-width : 1010px){
+
+.page-section--testimonials {
+            background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
+            background-size: cover
+       
+      }
     }
 
 .headline{
@@ -569,58 +634,129 @@ color:#FFF;
         display: table;
     }
 
+.row--gutters {
+      margin-right: -65px;
+    }
+
+.row--gutters-small{
+        margin-right: -45px;
+    }
+
+.row--gutters-large {
+      margin-right: -100px;
+    }
+
+.row--gutters > div {
+      padding-right: 65px;
+    }
+
+.row--gutters-small > div{
+        padding-right: 45px;
+    }
+
+.row--gutters-large > div {
+      padding-right: 100px;
+    }
+
+.row__b-margin-until-medium {
+      margin-bottom: 1rem;
+    }
+
+.row--t-padding{
+
+        margin-top: 80px;
+    }
+
+@media(min-width : 800px){
+  
+      .row__b-margin-until-medium {
+        margin-bottom: 0;
+      }
+  
+      .row__medium-4 {
+        float: left;
+        width: 33.33%;
+      }
+  
+      .row__medium-4--larger {
+        width: 37%;
+      }
+  
+      .row__medium-6 {
+        float: left;
+        width: 50%;
+      }
+  
+      .row__medium-8 {
+        float: left;
+        width: 66.66%;
+      }
+  
+      .row__medium-8--smaller {
+        width: 63%;
+      }
+    }
+
+@media(min-width : 1010px){
+  
+      .row__b-large-until-medium {
+        margin-bottom: 0;
+      }
+  
+      .row__large-4 {
+        float: left;
+        width: 33.33%;
+      }
+  
+      .row__large-4--larger {
+        width: 37%;
+      }
+  
+      .row__large-6 {
+        float: left;
+        width: 50%;
+      }
+  
+      .row__large-8 {
+        float: left;
+        width: 66.66%;
+      }
+  
+      .row__large-8--smaller {
+        width: 63%;
+      }
+    }
+
+/* Begin Equal Height Rules */
+
 @media(min-width : 800px){
 
-        .row__b-margin-until-medium{
-        margin-bottom:0;   
-        }
-
-        .row__medium-4{
-            float: left;
-            width:33.33%;
-        }
-        .row__medium-8{
-            float: left;
-            width: 66.66%;
-        }
-
-        .row__medium-4--larger{
-            width:37%; 
-        }
-        .row__medium-8--smaller{
-            width:63%;
-
-        }
-        .row__medium-6{
-            float: left;
-            width:50%; 
-        }
+.row--equal-height-at-medium {
+          display: -webkit-box;
+          display: flex
+      }
     }
 
-.row__b-margin-until-medium{
-        margin-bottom:1rem;   
+.row--equal-height-at-medium > div {
+          float: none;
+          display: -webkit-box;
+          display: flex;
         }
 
-/* added the negetive value here to avoid the extra pixel 
-    overflow outside to avoid this we use 'overflow:hidden' 
-    in wrapper here. */
+@media(min-width : 1010px){
 
-.row--gutter{
-        margin-right:-65px;
+.row--equal-height-at-large {
+          display: -webkit-box;
+          display: flex
+    
+     }
     }
 
-.row--gutter-large{
-        margin-right:-100px;
-    }
-
-.row--gutter > div{
-        padding-right: 65px;
-        
-    }
-
-.row--gutter-large > div{
-        padding-right:100px;
-    }
+.row--equal-height-at-large > div {
+          float: none;
+          display: -webkit-box;
+          display: flex;
+        }
 
 .generic-content-container p{
         line-height:1.65;
@@ -725,5 +861,52 @@ color:#FFF;
             font-size:1.875rem
     }
     }
+
+.testimonial {
+    background-color: rgba(255, 255, 255, .8);
+    padding: 0 18px 1px 18px;
+    margin-bottom:98px ;
+  }
+
+@media(min-width : 1010px){
+
+.testimonial {
+        margin-bottom:0;
+        padding: 0 1.8125rem 1px 1.8125rem
+  }
+    }
+
+.testimonial__photo {
+      border-radius: 80px;
+      overflow: hidden;
+      width: 160px;
+      height: 160px;
+      margin: 0 auto -80px auto;
+      position: relative;   
+      top: -80px;
+      border: 6px solid rgba(255, 255, 255, .8);
+    }
+
+.testimonial__title {
+      color: #2f5572;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin: 0;
+    }
+
+.testimonial__subtitle {
+      color: #d59541;
+      text-align: center;
+      font-weight: 400;
+      font-size: 0.9375rem;
+      margin: .25rem 0 1rem 0;
+    }
+
+.testimonial--last
+    {
+        margin-bottom: 0;
+    }
+
 
 

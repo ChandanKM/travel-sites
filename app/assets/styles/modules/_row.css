@@ -1,59 +1,128 @@
-.row{
-    
+.row {
+
     @mixin clearfix;
+  
+    &--gutters {
+      margin-right: -65px;
+    }
+
+    &--gutters-small{
+        margin-right: -45px;
+    }
+  
+    &--gutters-large {
+      margin-right: -100px;
+    }
+  
+    &--gutters > div {
+      padding-right: 65px;
+    }
+
+    &--gutters-small > div{
+        padding-right: 45px;
+    }
+  
+    &--gutters-large > div {
+      padding-right: 100px;
+    }
+  
+    &__b-margin-until-medium {
+      margin-bottom: 1rem;
+    }
+
+    &--t-padding{
+
+        margin-top: 80px;
+    }
 
     
-    @mixin atMedium{
-
-        &__b-margin-until-medium{
-        margin-bottom:0;   
-        }
-
-        &__medium-4{
-            float: left;
-            width:33.33%;
-        }
-        &__medium-8{
-            float: left;
-            width: 66.66%;
-        }
-
-        &__medium-4--larger{
-            width:37%; 
-        }
-        &__medium-8--smaller{
-            width:63%;
-
-        }
-        &__medium-6{
-            float: left;
-            width:50%; 
-        }
-        
-    }
-    &__b-margin-until-medium{
-        margin-bottom:1rem;   
-        }
-
-
-    /* added the negetive value here to avoid the extra pixel 
-    overflow outside to avoid this we use 'overflow:hidden' 
-    in wrapper here. */
-
-    &--gutter{
-        margin-right:-65px;
+  
+    @mixin atMedium {
+  
+      &__b-margin-until-medium {
+        margin-bottom: 0;
+      }
+  
+      &__medium-4 {
+        float: left;
+        width: 33.33%;
+      }
+  
+      &__medium-4--larger {
+        width: 37%;
+      }
+  
+      &__medium-6 {
+        float: left;
+        width: 50%;
+      }
+  
+      &__medium-8 {
+        float: left;
+        width: 66.66%;
+      }
+  
+      &__medium-8--smaller {
+        width: 63%;
+      }
     }
 
-    &--gutter-large{
-        margin-right:-100px;
+    @mixin atLarge {
+  
+      &__b-large-until-medium {
+        margin-bottom: 0;
+      }
+  
+      &__large-4 {
+        float: left;
+        width: 33.33%;
+      }
+  
+      &__large-4--larger {
+        width: 37%;
+      }
+  
+      &__large-6 {
+        float: left;
+        width: 50%;
+      }
+  
+      &__large-8 {
+        float: left;
+        width: 66.66%;
+      }
+  
+      &__large-8--smaller {
+        width: 63%;
+      }
     }
 
-    &--gutter > div{
-        padding-right: 65px;
-        
-    }
-    &--gutter-large > div{
-        padding-right:100px;
-    }
+      /* Begin Equal Height Rules */
+      &--equal-height-at-medium {
+        @mixin atMedium {
+          display: flex;
+        }
 
-}
+        & > div {
+          float: none;
+          display: flex;
+        }
+      }
+
+
+      &--equal-height-at-large {
+        @mixin atLarge {
+          display: flex;
+        }
+    
+        & > div {
+          float: none;
+          display: flex;
+        }
+    
+     }
+
+
+  
+  
+  }
