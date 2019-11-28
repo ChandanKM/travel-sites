@@ -6,16 +6,9 @@ cssvars=require("postcss-simple-vars"),
 nested=require("postcss-nested"),
 cssImport =require("postcss-import"),
 browseSync = require("browser-sync").create(),
-mixins = require("postcss-mixins"),
-svgSprite = require("gulp-svg-sprite");
+mixins = require("postcss-mixins");
 
-var config = {
-    mode:{
-        css:{
 
-        }
-    }
-}
 gulp.task('default',function(){
 console.log("We created the gulp default task");
 });
@@ -51,12 +44,4 @@ gulp.task('watch',function()
 gulp.task('cssInject',['style'],function(){
     return gulp.src('./app/temp/styles/styles.css')
     .pipe(browseSync.stream());
-});
-
-gulp.task('createSprite',function(){
-    return gulp.src('./app/assets/images/icons/**/*.svg')
-    .pipe(svgSprite(config))
-    .pipe(gulp.dest('app/temp/sprite/'))
-});
-
-
+})
