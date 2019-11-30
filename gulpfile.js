@@ -9,7 +9,9 @@ browseSync = require("browser-sync").create(),
 mixins = require("postcss-mixins"),
 svgSprite = require("gulp-svg-sprite"),
 rename =require("gulp-rename"),
-del = require("del");
+del = require("del"),
+hexrgba = require('postcss-hexrgba');
+
 
 
 ///config property is to config the template file to configure everything
@@ -42,7 +44,7 @@ gulp.task('html',function(){
 
 gulp.task('style',function(){
     return gulp.src('./app/assets/styles/styles.css')
-    .pipe(postcss([cssImport,mixins,cssvars,nested,autoprefixer]))
+    .pipe(postcss([cssImport,mixins,cssvars,nested,hexrgba,autoprefixer]))
     .pipe(gulp.dest('./app/temp/styles'))
 });
 
