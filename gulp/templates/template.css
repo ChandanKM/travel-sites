@@ -1,0 +1,31 @@
+/*
+please maintain same for any type of  
+
+do not edit the modules/_sprite.css to its genearted automaticaly by the gulp.
+insted edit gulp/templat/template.css
+ */
+/* this is the css file */
+/* any code through this moustach 
+curly braces will loop through out.. 
+
+use the below link for the details like a what to fill in the class
+
+kindly go throuh it.
+
+https://github.com/jkphl/gulp-svg-sprite
+*/
+
+{{#shapes}}
+{{#first}}
+.icon{
+    background-image:url('/assets/images/sprites/{{{sprite}}}');
+    }
+{{/first}}
+
+.icon--{{base}} {
+
+    width:{{width.outer}}px;
+    height:{{height.outer}}px;
+    background-position:{{position.relative.xy}};
+}
+{{/shapes}}
