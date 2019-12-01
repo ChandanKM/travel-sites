@@ -5,8 +5,8 @@
     }   
    
     &--blue{
-background-color: $mainblue;
-color:#FFF;
+    background-color: $mainblue;
+    color:#FFF;
     }
 
     &--no-b-padding-until-medium

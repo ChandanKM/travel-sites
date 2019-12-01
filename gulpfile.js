@@ -10,7 +10,11 @@ mixins = require("postcss-mixins"),
 svgSprite = require("gulp-svg-sprite"),
 rename =require("gulp-rename"),
 del = require("del"),
-hexrgba = require('postcss-hexrgba');
+hexrgba = require('postcss-hexrgba')
+webpack=require('webpack');
+
+
+
 
 
 
@@ -63,6 +67,11 @@ gulp.task('watch',function()
     watch('./app/assets/styles/**/*.css',function(){
         gulp.start('cssInject');
     });
+
+    watch('./app/assets/scripts/**/*.js',function(){
+        gulp.start('scriptReload');
+    });
+    
 });
 
 gulp.task('cssInject',['style'],function(){
@@ -103,3 +112,20 @@ gulp.task('endClean',['copySpriteGraphic','copySpriteCSS'],function(){
 gulp.task('icons',['beginClean','createSprite','copySpriteGraphic','copySpriteCSS','endClean']);
 
 
+
+//generating the scripts
+
+gulp.task('scripts',function(callback){
+    webpack(require("./webpack.config.js"),function(err,stats){
+        if(err){
+            console.log(err.toString());
+        }
+        console.log(stats.toString());
+        callback();
+    });
+} );
+
+
+gulp.task('scriptReload',['scripts'],function(){
+    browseSync.reload();    
+});
