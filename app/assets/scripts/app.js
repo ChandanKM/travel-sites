@@ -1,11 +1,5 @@
-//This will get all the person object contents sent the Exports class.
+import MobileMenu from './modules/MobileMenu';
+import RevealOnScroll from './modules/RevealOnScroll';
 
-//var Person = require("./modules/Person"); //this is the lod sytle of exporting the javaScript FileList.
-//Creating the object of the class and calling the great method.
-
-import Person from './modules/Person';
-
-var chandan =new Person("Chandan","Blue");
-var omi =new Person("Omi","Green");
-chandan.great();
-omi.great();        
+var mobileMenu = new MobileMenu();
+var revealOnScroll = new RevealOnScroll();
