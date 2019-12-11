@@ -1027,8 +1027,13 @@ Instead edit gulp/templates/sprite */
 @media (min-width: 800px) {
 
 .site-header {
+    position: fixed;
     background-color: rgba(47,85,114, .3)
 }
+
+    .site-header--dark{
+      background-color: rgba(23,51,72,.85);
+    }
   }
 
 @media (min-width: 800px) {
@@ -1046,6 +1051,10 @@ Instead edit gulp/templates/sprite */
             transform: translateX(-50%) scale(.8);
     -webkit-transform-origin: 50% 0;
             transform-origin: 50% 0;
+    -webkit-transition: -webkit-transform .3s ease-out;
+    transition: -webkit-transform .3s ease-out;
+    transition: transform .3s ease-out;
+    transition: transform .3s ease-out, -webkit-transform .3s ease-out;
     background-color: #2f5572;
     padding: 25px 36px;
   }
@@ -1053,10 +1062,15 @@ Instead edit gulp/templates/sprite */
 @media (min-width: 800px) {
 
 .site-header__logo {
-      left: auto;
-      -webkit-transform: translateX(0);
+      left: auto; 
+      -webkit-transform: translateX(0); 
               transform: translateX(0)
   }
+
+      .site-header--dark .site-header__logo {
+        -webkit-transform : scale(0.57);
+                transform : scale(0.57);
+      }
   }
 
 .site-header__logo__graphic {
@@ -1078,7 +1092,7 @@ Instead edit gulp/templates/sprite */
       top: 0;
       left: 0;
       width: 20px;
-      height: 3px;
+      height: 3px; 
       background-color: #FFF;
       -webkit-transform-origin: 0 0;
               transform-origin: 0 0;
@@ -1242,6 +1256,10 @@ Instead edit gulp/templates/sprite */
       padding: 12px 0;
       background-color: transparent
   }
+
+      .primary-nav a.is-current-link{
+        color:#fabb69;
+      }
   }
 
 .reveal-item {
@@ -1254,9 +1272,6 @@ Instead edit gulp/templates/sprite */
 
 .reveal-item--is-visible {
     opacity: 1;
-<<<<<<< HEAD
-=======
     -webkit-transform: scale(1);
             transform: scale(1);
->>>>>>> reveal-on-scroll
   }
