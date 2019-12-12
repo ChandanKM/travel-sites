@@ -7,6 +7,7 @@
     "jquery": "^3.4.1",
     "jquery-smooth-scroll": "^2.2.0",
     "latest": "^0.2.0",
+    "lazysizes": "^5.2.0-beta1",
     "normalize.css": "^8.0.1",
     "waypoints": "^4.0.1"
   },
