@@ -17,5 +17,5 @@
 @import "modules/_site-header";
 @import "modules/_primary-nav";
 @import "modules/_reveal-item";
-@import "modules/_models.css";
-@import "modules/_social-icon.css";
+@import "modules/_modal";
+@import "modules/_social-icons";

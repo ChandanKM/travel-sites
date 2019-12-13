@@ -13,8 +13,8 @@
     position: fixed;
     background-color: rgba($mainBlue, .3);
 
-    &--dark{
-      background-color: rgba(23,51,72,.85);
+    &--dark {
+      background-color: rgba(23, 51, 72, .85);
     }
   }
 
@@ -29,21 +29,21 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%) scale(.8);
-    transform-origin: 50% 0;
     transition: transform .3s ease-out;
+    transform-origin: 50% 0;
     background-color: $mainBlue;
     padding: 25px 36px;
 
     @mixin atMedium {
-      left: auto; 
+      left: auto;
       transform: translateX(0);
 
       .site-header--dark & {
-        transform : scale(0.57);
+        transform: scale(.57);
       }
     }
   }
- 
+
   &__logo__graphic {
     text-indent: -9999px;
   }
@@ -62,7 +62,7 @@
       top: 0;
       left: 0;
       width: 20px;
-      height: 3px; 
+      height: 3px;
       background-color: #FFF;
       transform-origin: 0 0;
       transition: transform .3s ease-out;
