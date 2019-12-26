@@ -18,7 +18,7 @@ https://github.com/jkphl/gulp-svg-sprite
 {{#shapes}}
 {{#first}}
 .icon{
-    background-image:url('assets/images/sprites/{{{sprite}}}');
+    background-image:url('/assets/images/sprites/{{{sprite}}}');
     }
 {{/first}}
 
